@@ -3,10 +3,9 @@ import os, sys, json, time
 
 
 target_user = sys.argv[1]
-count_scan = sys.argv[2]
 session_file = "newSessionStatus"
 symsplit = "&"
-config_file = 'config/config.json'
+config_file = 'config.json'
 prefix = "file_status_"
 postfix = ".log"
 
@@ -66,9 +65,6 @@ def validate_flags():
         if len(sys.argv) == 1:
             print("Not found name: username, @username, +7999.. , 8999....")
             sys.exit(0)
-        if len(sys.argv) == 2:
-            print("Not found count-scans: (any int) or (0-while loop)")
-            sys.exit(0)
 
     
 def main():
@@ -78,14 +74,11 @@ def main():
         config = json.load(f)
 
     namefile = f"{prefix}{target_user}{postfix}"
-    b = Bot(config["api_hash"], config["api_id"], namefile, target_user, config["delay_sec"])
 
-    if int(count_scan) == 0:
-        while True:
-            b.run()
-    else:
-        for i in range(int(count_scan)):
-            b.run()
-
+    try:
+        b = Bot(config["api_hash"], config["api_id"], namefile, target_user, config["delay_sec"])
+        b.run()
+    except:
+        pass
 
 main()

@@ -52,15 +52,10 @@ python3 getstatus.py test 1
 > Examples:
 ``` bash
 # using:
-python3 getstatus.py [target] [mode-count]
-
-# set mode script:
-python3 getstatus.py Bob 1 #1 lines to file
-python3 getstatus.py Bob 3 #3 lines to file
-python3 getstatus.py Bob 0 #while lines to file
+bash run.sh [target]
 
 # set target-user:
-python3 getstatus.py Alice 1
-python3 getstatus.py @Alice_998877 1
-python3 getstatus.py +79008007060 1
-python3 getstatus.py 89008007060 1
+bash run.sh Alice 
+bash run.sh @Alice_998877 
+bash run.sh +79008007060 
+bash run.sh 89008007060 
