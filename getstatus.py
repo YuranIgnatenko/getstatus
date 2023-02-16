@@ -6,7 +6,7 @@ target_user = sys.argv[1]
 count_scan = sys.argv[2]
 session_file = "newSessionStatus"
 symsplit = "&"
-config_file = 'config/config.json'
+config_file = 'config.json'
 prefix = "file_status_"
 postfix = ".log"
 
