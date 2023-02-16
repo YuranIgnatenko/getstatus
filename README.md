@@ -59,3 +59,7 @@ bash run.sh Alice
 bash run.sh @Alice_998877 
 bash run.sh +79008007060 
 bash run.sh 89008007060 
+```
+> Demo Screen
+
+![demo](prev_demo_status.png)
