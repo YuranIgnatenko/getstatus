@@ -78,13 +78,14 @@ def main():
         config = json.load(f)
 
     namefile = f"{prefix}{target_user}{postfix}"
-    b = Bot(config["api_hash"], config["api_id"], namefile, target_user, config["delay_sec"])
 
     if int(count_scan) == 0:
         while True:
+            b = Bot(config["api_hash"], config["api_id"], namefile, target_user, config["delay_sec"])
             b.run()
     else:
         for i in range(int(count_scan)):
+            b = Bot(config["api_hash"], config["api_id"], namefile, target_user, config["delay_sec"])
             b.run()
 
 
